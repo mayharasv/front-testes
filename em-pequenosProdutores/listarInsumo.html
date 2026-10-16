@@ -1,0 +1,130 @@
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lista Insumos</title>
+        <link rel="stylesheet" href="assets/css/listarInsumo.css">
+    </head>
+    <body>
+    <!-- HEADER / CABEÇALHO -->
+    <header>
+
+        <img src="{{ url_for('static', filename='img/icone_logo.png') }}">
+        <h1>Preço<span>Certo</span></h1>
+        <p>PRECIFICAÇÃO AFETIVA</p>
+        <nav>
+            <a href="{{url_for('home')}}" >Voltar</a>
+        </nav>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+        {% endif %}
+        {% endwith %} 
+    </header>
+    <!-- BARRA LATERAL - MENU -->
+    <main>
+        <div class="barra-botoes">
+            <a><img src="{{ url_for('static', filename='img/icone_casa.png') }}">Início</a>
+            <a><img src="{{ url_for('static', filename='img/icone_caixa.png') }}">Insumos</a>
+            <a><img src="{{ url_for('static', filename='img/icone_tocapng.png') }}">Produtos</a>
+            <a><img src="{{ url_for('static', filename='img/icone_engrenagem.png') }}"> Configuração</a>
+            <div>
+                <img src="{{ url_for('static', filename='img/folhinhapng.png') }}" class="folhinha">
+
+                <p>Boas escolhas hoje,melhores resultados amanhã!</p>
+            </div>
+            <img src="{{ url_for('static', filename='img/toca.png') }}">
+        </div>
+
+            <div class="ola">
+        
+        
+                <div class="adicionar">
+
+                    <a href="{{url_for('adicionar_insumo') }}"  class="adicionar-insumo">
+                        <p class="mais">+</p>
+                        <p class="adi-insumo">Adicionar Insumo</p>
+                    </a>
+
+ 
+                </div>
+     
+            </div>
+
+        <!-- CONTEUDO INCIAL -->
+        <div class="conteudo">
+
+            <div class="parte-TituloePesquisa">
+
+                <div class="titulo">
+                    <img src="assets/img/icones-imagem/icone_logo.png" alt="logo">
+                    <div>
+                        <h1>Insumos</h1>
+                        <p>Pesquise os insumos que deseja utilizar nesta receita</p>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+
+
+            <!-- TABELAS -->
+            <div class="tabelas">
+
+                <!-- TABELA DE INSUMOS RECENTES -->
+                <div class="tabela-insumos">
+                    <table class="insumos">
+                        <div class="nome-tabela">
+                            <img src="assets/img/icones-imagem/icone-home1.png" alt="icone-home">
+                            <h2>Insumos Recentes</h2>
+                        </div>
+                        <thead>
+                            
+                            <tr class="tabela1">
+                                
+                                <td class="informacoes">Nome</td>
+                                <td class="informacoes">Unidade</td>
+                                <td class="informacoes">Custo unitário</td>
+                                <td class="informacoes">Ações</td>
+                            </tr>
+
+                        </thead>
+
+
+
+            
+
+                        <tbody>
+                        {% for insumo in insumos %}
+                            <tr>
+                                <td>{{ insumo[0] }}</td>
+                                <td>{{ insumo[1] }}</td>
+                                <td>{{ insumo[2] }}</td>
+                                <td>{{ insumo[3] }}</td>
+                                <td>{{ insumo[4] }}</td>
+                                <td class="acoes">
+                                    <a class="editar" href="{{ url_for('editar_insumo', id=insumo[0]) }}">Editar</a>
+
+                                    <form action="{{ url_for('deletar_insumo', id=insumo[0]) }}" method="POST" style="display: inline">
+                                        <button class="delete" type="submit">Deletar</button>
+                                    </form>
+                                </td>
+
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+        </main>
+
+
+    </body>
+</html>

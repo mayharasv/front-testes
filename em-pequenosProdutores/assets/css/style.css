@@ -1,0 +1,701 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESET GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: #C55232;
+    --cor-texto: #1A1F24;
+    --cor-fundo: #FDF7ED;
+    --cor-fundo-header: #FEFAF3;
+    --cor-fundo-quadro: white;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    font-family: Arial, sans-serif;
+    color: var(--cor-texto);
+}
+
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 68px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-fundo-header) ;
+}
+header .barra-menu{
+    display: none;
+}
+
+header .logo {
+    width: 48px;
+    height: 48px;
+    margin-left: 17px;
+}
+
+header h1 {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+header p {
+    position: absolute;
+    margin-left: 76px;
+    margin-top: 40px;
+    font-size: 9px;
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+header nav {
+    position: absolute;
+    margin-left: 95%;
+}
+
+header nav a {
+    font-size: 14px;
+    color: #333;
+}
+
+
+/* ÁREA PRINCIPAL */
+
+main {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-height: calc(100vh - 168px);
+}
+
+
+
+/* BARRA LATERAL */
+.barra-botoes {
+   width: 220px;
+   height: 785px;
+   background-color: var(--cor-fundo-header);
+   padding-top: 8px;
+   position: relative;
+}
+
+.barra-botoes .icones{
+    margin-bottom: 60px;
+}
+.barra-botoes  a {
+   width: 180px;
+   height: 48px;
+   margin-left: 20px;
+   display: flex;
+   align-items: center;
+   color: var(--cor-texto);
+   font-size: 16px;
+}
+
+.barra-botoes a img {
+   width: 27px;
+   margin-right: 20px;
+}
+
+/* FRASE DA LATERAL */
+.barra-botoes  div {
+   width: 170px;
+   height: 125px;
+   margin-left: 28px;
+   margin-top: 70px;
+   padding: 15px 12px;
+   background-color: #eddfd0;
+   border-radius: 12px;
+}
+.barra-botoes  div p {
+   margin: 0;
+   color: #d09475;
+   font-size: 14px;
+   line-height: 17px;
+}
+
+/* FLOR DA BARRA AO LADO */
+.barra-botoes  img {
+   width: 155px;
+   margin-left: 22px;
+   margin-top: 65px;
+}
+
+.folhinha{
+    position:relative;
+    bottom: 5px;
+    width: 40px;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+.conteudo {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+}
+
+
+/* ÁREA OLÁ */
+
+.conteudo .ola {
+    min-height: 80px;
+    height: auto;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.ola h2 {
+    margin-bottom: 5px;
+}
+
+
+/* BOTÃO ADICIONAR INSUMO */
+
+.adicionar-insumo {
+    position: relative;
+    width: 148px;
+    min-width: 148px;
+    min-height: 58px;
+    background-color: var(--cor-principal);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    color: var(--cor-fundo-quadro);
+    margin-top: 20px;
+}
+
+.adicionar-insumo .mais {
+    margin: 0 8px 0 12px;
+    font-size: 30px;
+}
+
+.adi-insumo {
+    font-size: 13px;
+}
+
+
+/* BOTÃO ADICIONAR PRODUTO */
+
+.adicionar-produto {
+    position: relative;
+    width: 148px;
+    min-width: 148px;
+    min-height: 58px;
+    background-color: var(--cor-principal);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    color: var(--cor-fundo-quadro);
+    margin-top: 20px;
+}
+
+.adicionar-produto .mais {
+    margin: 0 8px 0 12px;
+    font-size: 30px;
+}
+
+.adi-produto {
+    font-size: 13px;
+}
+
+
+/* ÁREA DOS CARDS E TABELAS */
+
+.area-cards-tabela {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin-left: 5px;
+}
+
+.card {
+    flex: 1 1 220px;
+    min-width: 0;
+    max-width: 300px;
+    min-height: 150px;
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+    padding: 25px 12px 15px;
+}
+
+
+/* ÍCONE DOS CARDS */
+
+.card img {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    object-fit: contain;
+}
+
+
+/* TEXTO DOS CARDS */
+
+.card p {
+    margin: 0 0 35px 53px;
+    font-size: 14px;
+    color: black;
+    line-height: 17px;
+}
+
+
+/* NÚMERO DOS CARDS */
+
+.card .num {
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 53px;
+    overflow-wrap: anywhere;
+}
+
+
+/* TABELAS RECENTES */
+
+.tabelas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.tabelas img {
+    max-width: 50px;
+    height: auto;
+    margin-top: 22px;
+    margin-left: 22px;
+}
+
+.tabela-insumosRecentes,
+.tabela-produtosRecentes {
+    flex: 1 1 400px;
+    min-width: 0;
+    max-width: 100%;
+    margin-top: 0;
+    background-color: white;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+
+/* TABELAS */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+thead {
+    color: black;
+}
+
+thead tr {
+    height: 60px;
+}
+
+thead td {
+    padding: 14px 12px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.informacoes {
+    text-align: center;
+}
+
+
+/* LINHAS */
+
+tbody tr {
+    min-height: 70px;
+    border-bottom: 1px solid #eee3d7;
+}
+
+tbody tr:hover {
+    background-color: var(--cor-fundo);
+}
+
+tbody td {
+    padding: 14px 12px;
+    font-size: 13px;
+    color: black;
+}
+
+
+/* CÓDIGO */
+
+tbody td:first-child {
+    font-weight: bold;
+    color: black;
+}
+
+
+/* AÇÕES */
+
+tbody td:last-child {
+    text-align: center;
+    white-space: nowrap;
+}
+
+td.acoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+/* BOTÃO EDITAR */
+
+.editar {
+    display: inline-block;
+    padding: 9px 14px;
+    background-color: #F4A186;
+    color: #573522;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.editar:hover {
+    background-color: #d8c0a3;
+}
+
+
+/* BOTÃO DELETAR */
+
+button.delete {
+    padding: 9px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #F8DAD0;
+    color: #9b4444;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+button.delete:hover {
+    background-color: #e7c2c2;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    min-height: 100px;
+    height: auto;
+    padding: 20px 40px 20px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.logo-footer img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.logo-footer h2 {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.logo-footer p {
+    font-size: 8px;
+    color: var(--cor-texto);
+}
+
+.frase {
+    color: var(--cor-texto);
+    margin-left: 20px;
+}
+
+span {
+    color: var(--cor-principal);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVIDADE: NOTEBOOKS E TELAS MENORES */
+
+@media (max-width: 1100px) {
+    .barra-botoes {
+        flex-basis: 190px;
+        width: 190px;
+    }
+
+    .conteudo {
+        padding: 25px;
+    }
+
+    .cards {
+        gap: 15px;
+    }
+
+    .card {
+        flex-basis: 200px;
+    }
+
+    .tabela-insumosRecentes,
+    .tabela-produtosRecentes {
+        flex-basis: 320px;
+    }
+}
+
+
+/* RESPONSIVIDADE: TABLETS */
+
+@media (max-width: 800px) {
+    main {
+        min-height: calc(100vh - 68px);
+    }
+
+    .barra-botoes {
+        flex-basis: 160px;
+        width: 160px;
+        min-height: calc(100vh - 68px);
+    }
+
+    .barra-botoes a {
+        margin-left: 12px;
+        width: calc(100% - 20px);
+        font-size: 14px;
+    }
+
+    .barra-botoes a img {
+        margin-right: 10px;
+    }
+
+    .conteudo {
+        padding: 20px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .tabelas {
+        flex-direction: column;
+    }
+
+    .tabela-insumosRecentes,
+    .tabela-produtosRecentes {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+
+/* RESPONSIVIDADE: CELULARES */
+
+@media (max-width: 600px) {
+    header {
+        min-height: 68px;
+        padding: 0 12px;
+    }
+
+    header .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    header h1 {
+        font-size: 16px;
+        margin-left: 8px;
+    }
+
+    header p {
+        left: 60px;
+        top: 43px;
+        font-size: 8px;
+    }
+
+    header nav {
+        padding-left: 8px;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+
+    main {
+        display: block;
+        min-height: auto;
+    }
+
+    .barra-botoes {
+        display: none;
+    }
+
+    .conteudo {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .conteudo .ola {
+        min-height: 70px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: none;
+        flex: auto;
+    }
+
+    .tabelas {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .tabela-insumosRecentes,
+    .tabela-produtosRecentes {
+        width: 100%;
+        flex: auto;
+    }
+
+    .tabela-insumosRecentes table,
+    .tabela-produtosRecentes table {
+        min-width: 450px;
+    }
+
+    thead td,
+    tbody td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    footer {
+        min-height: auto;
+        padding: 20px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .frase {
+        margin-left: 0;
+    }
+}

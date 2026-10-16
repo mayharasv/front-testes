@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto</title>
+    <link rel="stylesheet" href="assets/css/produto.css">
+</head>
+<body>
+    <!-- HEADER / CABEÇALHO -->
+    <header>
+        <img src="assets/img/icones-imagem/barrinhas-menu.png" alt="barra do menu" class="barra-menu">
+        <img src="assets/img/icones-imagem/icone_logo.png" alt="logo" class="logo">
+        <h1>Preço<span>Certo</span></h1>
+        <p>PRECIFICAÇÃO AFETIVA</p>
+        <nav>
+            <a href="{{url_for('pagina inicial')}}" >Sair</a>
+        </nav>
+ 
+    </header>
+    <!-- BARRA LATERAL - MENU -->
+    <main>
+        <div class="barra-botoes">
+            <a><img class="icones" src="assets/img/icones-imagem/icone_casa.png" alt="incio"> Início</a>
+            <a><img class="icones" src="assets/img/icones-imagem/icone-insumos.png" alt="insumos"> Insumos</a>
+            <a><img class="icones" src="assets/img/icones-imagem/icone_tocapng.png" alt="produtos"> Produtos</a>
+            <a><img class="icones" src="assets/img/icones-imagem/icone_engrenagem.png" alt="configuracao"> Configuração</a>
+            <div class="frase-lateral">
+                <img src="assets/img/icones-imagem/folhinhapng.png" alt="folhinha" class="folhinha">
+
+                <p>Boas escolhas hoje,melhores resultados amanhã!</p>
+            </div>
+            <img src="assets/img/icones-imagem/folha-barraIcones.png" alt="flor-barra">
+        </div>
+
+        <!-- CONTEÚDO -->
+        <div class="conteudo">
+            <div class="titulo">
+                <img src="assets/img/icones-imagem/icone_logo.png" alt="logo">
+                <div>
+                    <h1>Adicionar Produtos</h1>
+                    <p>Cadastre suas receitas e suas informações</p>
+                </div>
+            </div>
+
+            <section>
+                <h2>Novo produto</h2>
+                <p class="subtitulo">Informe os dados abaixo para calcular o custo corretamente.</p>
+
+                <form>
+                    <label>Nome do produto *</label>
+                    <input type="text" placeholder="Ex: Bolo de Cenoura">
+
+                    <div class="linha">
+                        <div class="insumos">
+                            <label>Insumos usados *</label>
+                            <button type="button" class="mais">+</button>
+                        </div>
+                        <div>
+                            <label>Custo Total</label>
+                            <input type="text" placeholder="Ex: R$ 50,00">
+                        </div>
+                    </div>
+
+                    <div class="linha">
+                        <div>
+                            <label>Margem de Lucro *</label>
+                            <input type="text" placeholder="Ex: 50%">
+                        </div>
+                        <div>
+                            <label>Sugestão de preço de venda</label>
+                            <input type="text" placeholder="Ex: R$ 15,90">
+                        </div>
+                    </div>
+
+                    <label>Preço de Venda *</label>
+                    <input type="text" placeholder="Ex: R$20,00">
+
+                    <label>Lucro por unidade</label>
+                    <input type="text" placeholder="Ex: R$30,00">
+
+                    <div class="botoes">
+                        <a href="index.html" class="botao">Cancelar</a>
+                        <button type="submit" class="botao">Salvar produto</button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER / RODAPÉ -->
+    <footer>
+        <div class="logo-footer">
+            <img src="{{ url_for('static', filename='img/chapeu.png') }}" >
+            <div>
+                <h2>Preço<span>Certo</span></h2>
+                <p>PRECIFICAÇÃO AFETIVA</p>
+            </div>
+            <span class="frase">Precificação afetiva para negócios reais.</span>
+        </div>
+
+        <span>© 2026 PreçoCerto</span>
+    </footer>
+
+</body>
+</html>

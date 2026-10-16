@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Insumo</title>
+    <link rel="stylesheet" href="assets/css/pesquisarInsumo.css">
+</head>
+<body>
+    <!-- HEADER / CABEÇALHO -->
+    <header>
+        <img class="barra-menu" onclick="mostrarMenu()" src="assets/img/icones-imagem/barrinhas-menu.png"  id="barramenu"  alt="Abrir menu">
+
+        <img src="{{ url_for('static', filename='img/icone_logo.png') }}">
+        <h1>Preço<span>Certo</span></h1>
+        <p>PRECIFICAÇÃO AFETIVA</p>
+        <nav>
+            <a href="{{url_for('home')}}" >Voltar</a>
+        </nav>
+        <!-- {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+        {% endif %}
+        {% endwith %} -->
+    </header>
+    <!-- BARRA LATERAL - MENU -->
+    <main>
+        <div id="barrabotoes" class="barra-botoes">
+            <a><img src="{{ url_for('static', filename='img/icone_casa.png') }}">Início</a>
+            <a><img src="{{ url_for('static', filename='img/icone_caixa.png') }}">Insumos</a>
+            <a><img src="{{ url_for('static', filename='img/icone_tocapng.png') }}">Produtos</a>
+            <a><img src="{{ url_for('static', filename='img/icone_engrenagem.png') }}"> Configuração</a>
+            <div>
+                <img src="{{ url_for('static', filename='img/folhinhapng.png') }}" class="folhinha">
+
+                <p>Boas escolhas hoje,melhores resultados amanhã!</p>
+            </div>
+            <img src="{{ url_for('static', filename='img/toca.png') }}">
+        </div>
+        <div class="conteudo">
+            <div class="parte-TituloePesquisa">
+
+                <div class="titulo">
+                    <img src="{{ url_for('static', filename='img/icone_logo.png') }}" alt="logo">
+                    <div>
+                        <h1>Insumos</h1>
+                        <p>Pesquise os insumos que deseja utilizar nesta receita</p>
+                    </div>
+                    <input  class="barra-pesquisa"  placeholder="Ex: Farinha de trigo" required>
+
+                    
+                </div>
+            </div>
+            <section>
+            </section>
+
+
+        </div>
+
+    </main>
+<!-- FOOTER / RODAPÉ -->
+    <footer>
+        <div class="logo-footer">
+            <img src="{{ url_for('static', filename='img/chapeu.png') }}">
+            <div>
+                <h2>Preço<span>Certo</span></h2>
+                <p>PRECIFICAÇÃO AFETIVA</p>
+            </div>
+            <span class="frase">Precificação afetiva para negócios reais.</span>
+        </div>
+
+        <span>© 2026 PreçoCerto</span>
+    </footer>
+    <script src="assets/js/barraMenu.js"></script>
+</body>
+</html>
